@@ -20,9 +20,9 @@ The COUGHVID dataset provides over 20,000 crowdsourced cough recordings represen
 
 Each audio file was 3-10 seconds long and contained multiple coughs that had been confirmed present by an expert pulmonologist. Although each sample contained a cough, I discovered some contained other background noises such as speech or traffic and every sample contained different amounts or silence/background noise between coughs.  I decided to segment the samples into individual coughs using a function. This would hopefully remove the unwanted background noise and silence in between the coughs and make the new samples more comparable. Initially this resulted in 3827 segments which I then used as my observations. The graph below shows an example of the segmentation function on an individual sample.
 
-
-![alt_text](Images/cough_segmentation.png)
-
+<p align="center">
+    <img  src="Images/cough_segmentation.png">
+</p>
 
 Further along in my project, after some initial modelling, I decided to re-segment the data as I noticed multiple coughs were still being grouped together. Using different parameters in the segmentation function I was able to more finely segment data resulting this time in 6,090 observations.  
 
@@ -44,8 +44,9 @@ These were extracted using the python package Librosa. For each
 When modelling I explored Logistic Regression, KNN, Decision Tree, SVM models as well as ensemble methods. I used grid search and cross validation to tune each models’ parameters. I started modelling using the original subset of data, then saw improvement using the segmented dataset and then saw further improvement using the more finely segmented dataset.
 
 
-![alt_text](Images/flow_chart.png)
-
+<p align="center">
+    <img  src="Images/flow_chart.png">
+</p>
 
 For the finer segmentation I got the following CV scores:
 
@@ -111,15 +112,18 @@ The bagging classifier model provided the highest cross validation score of 0.82
 For the bagging classifier KNN model, a ROC-AUC score of 0.93 was achieved as shown in the below ROC curve graph. This is a large improvement from the Logistic Regression model that scored 0.63. Accurately predicting the positive class is particularly important in this project. False negatives would be very costly as people who were COVID positive would be classed negative and would continue to spread the virus. A recall of 0.84 for the positive class is much higher than baseline but still 0.16 of positive cases would be labeled incorrectly. 
 
 
+<p align="center">
+    <img  src="Images/confusion_matrix.png">
+</p>
 
-![alt_text](Images/confusion_matrix.png)
+<p align="center">
+    <img  src="Images/ROC.png">
+</p>
 
+<p align="center">
+    <img  src="Images/PR.png">
+</p>
 
-
-![alt_text](Images/ROC.png)
-
-
-![alt_text](Images/PR.png)
 
 
 **Limitations & Further Steps**
