@@ -37,7 +37,7 @@ After much reading around the subject of audio analysis and reading papers on co
 * Zero Cross Rate
 * Root Mean Squared
 
-These were extracted using the python package Librosa. For each 
+These were extracted using the python package Librosa. 
 
 ## Modelling
 
