@@ -24,7 +24,7 @@ Each audio file was 3-10 seconds long and contained multiple coughs that had bee
     <img  src="Images/cough_segmentation.png">
 </p>
 
-Further along in my project, after some initial modelling, I decided to re-segment the data as I noticed multiple coughs were still being grouped together. Using different parameters in the segmentation function I was able to more finely segment data resulting this time in 6,090 observations.  
+Further along in my project, after some initial modelling, I decided to re-segment the data as I noticed multiple coughs were still being grouped together and some background noise was still being included. Using different parameters in the segmentation function I was able to more finely segment data resulting this time in 6,090 observations.  
 
 **Audio Features**
 
